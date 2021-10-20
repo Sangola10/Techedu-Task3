@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home page</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+
+<style>
+.mySlides {display:none;}
+</style>
+		<style>
+			body{
+				background-color : #2156b8;
+				margin: 0px;
+				padding : 0px;
+				position : absolute;
+				left: 0%;
+				top: 0%;
+				animation:animate 16s ease-in-out infinite;
+			}
+
+			div{
+				width : 1349px;
+				background-color : white;
+			}
+			#page{
+				background-color : #1f4894;
+				width : 1549px;
+				height : 25px;
+			}
+			button{
+				width : 100px;
+				height : 25px;
+				outline : none;
+				border : none;
+				float : left;
+			}
+			button:hover{
+				background-color : #1f4894;
+				color : white;
+			}
+			input{
+				width : 200px;
+				height : 25px;
+				background-color : black;
+				color : white;
+				margin : 10px;
+				border-radius : 10px;
+				border : 2px solid cyan;
+			}
+			.user{
+				text-align : center; 
+				padding : 10px; 
+				width : 700px; 
+				padding-left : auto; 
+				padding-right : auto;
+				margin-left : auto; 
+				margin-right : auto
+			}
+			h1{
+				text-align : center;
+				text-align : center; 
+				padding : 10px; 
+				width : 700px; 
+				padding-left : auto; 
+				padding-right : auto;
+				margin-left : auto; 
+				margin-right : auto
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id = "page">
+			<button style = "margin-left : 0px" onclick = "visible(8)" checked>Home</button>
+			<button onclick = "visible(1)" >Event</button>
+			<button onclick = "visible(2)" >Login</button>
+			<button onclick = "visible(3)" >SignUp</button>
+			<button onclick = "visible(4)" >Contact</button>
+			<button onclick = "visible(5)" >About</button>
+			<button onclick = "visible(6)" >Courses</button>
+			<button onclick = "visible(7)" >Internship</button>
+			
+		</div>
+		<div>
+			<img src = "img1.jpg" width = "200px" height = "120">
+			
+			
+				<h1>Tech<span>Ashu..</span></h1>
+			
+		</div>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="s.jpg" style="width:100%">
+  <img class="mySlides" src="s1.jpg" style="width:100%">
+  <img class="mySlides" src="s4.jpg" style="width:100%">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+		<div id = "display_Event" style = "display : none; background : none;">
+			<h1>Event</h1>
+			<table width ="1220px">
+				<tr>
+					 <img src = "s9.jpg" width = "300px">
+				</tr>
+				<tr>
+					<td><img src="s10.jpeg" width="665px" height="315px"></td>
+					<td><img src = "s5.jpg" width = "665px" height = "315px"></td>
+				</tr>
+			</table>
+		</div>
+		<div id = "display_Login" class = "user" style = "display : none; margin-top : 50px;">
+		<h1>Login</h1>
+			<form action="">
+				<label for = "email">E-mail</label>
+				<input type="email" name="email" id="email" required><br>
+				<label for = "password">Password</label>
+				<input type="password" name="password" id="password" required><br>
+				<input type="submit" value="Submit" onclick = "alert('value are submited')">
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+		<div id = "display_Sign_Up" class = "user" style = "display : none; margin-top : 25px;">
+		<h1>Sign Up</h1>
+			<form action="">
+				<label for = "email">E-mail</label>
+				<input type="email" name="email" id="email" required><br>
+				<label for = "password">Password</label>
+				<input type="text" name="password" id="password" required><br>
+				<label for = "password">Repeat Password</label>
+				<input type="password" name="password" id="password" required><br>
+				<input type="submit" value="Submit" onclick = "alert('value are submited')">
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+		<div id = "display_Contact_Details" class = "user" style = "display : none; margin-top : 10px;">
+			<h1>Contact Details</h1>
+			<form action = "">
+				<p>Name <input type="text" name="name" id="name" required></p>
+				<p>E-mail ID <input type="email" name="email" id="email" required></p>
+				<p>Address <input type="text" name="Address" id="address" required></p>
+				<P>Contact No. <input type="number" name="" id="" required></P>
+				<input type="submit" value="Submit" onclick = "alert('value are submited')">
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+		<div id = "display_About_Us" style = "display : none">
+			<h1>About Jaipur</h1>
+			<img src = "img.jpg" alt = "can't found" style = "float : right; width : 280px">
+			<p>Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. 
+				Planned by Vidyadhar Bhattacharya, Jaipur holds the distinction of being the first planned city of India. Renowned globally for its coloured gems, the capital city of Rajasthan combines the allure of its ancient history with all the advantages of a metropolis. Jaipur rises up majestically against the backdrop of the forts Nahargarh, Jaigarh and Garh Ganesh Temple. The bustling modern city is one of the three corners of the golden triangle that includes Delhi, Agra and Jaipur.
+				The story goes that in 1876, the Prince of Wales visited India on a tour. Since the colour pink was symbolic of hospitality, Maharaja Ram Singh of Jaipur painted the entire city pink. The pink that colours the city makes for a marvellous spectacle to behold.
+				</p>
+			<hr>
+			<h1>Apex Institute of Management & Science</h1>
+			<p>Sanjay Shiksha Samiti with its heritage of excellence in education for over 53 years, launched Apex University (AU), Jaipur. The University has been established by Rajasthan State Legislature Act No. 27 of 2018. The main campus of the University is spread over a sprawling 30 acres campus in an eco-friendly environment at Achrol on Jaipur-Delhi National Highway and is one of the best campuses in the region. AU has world class infrastructure, including state-of-the art research facilities and modern library. In line with Sanjay Shiksha Samiti's legacy of providing quality education, the university uses the latest and innovative methods and technology to impart education.</p>
+			<hr>
+			<h1> Founder Secretary & Principal Message</h1>
+			<p>	My Dear Parents,<span><br></span>
+				To actualize & live with the dream, the present Chairman of the group, Dr. Ravi Juniwal is at the helm of the Apex Group of Institutions spear heading to carry forward the unfulfilled dreams of its founder Chairman. 
+
+Under his well experienced capable & astute leadership, Dr. Juniwal has been instrumental in planning, organizing & leading the group institutes to new heights of success & excellence with a well structured team of dedicated staffs.
+
+Dr. Ravi Juniwal like his father, believes that a healthy and educated society is necessary to develop an enlightened civilization. 
+
+In line with his philosophy, Apex Group of Institutions have always taken responsibility of the Society at large to ensure world class education and a general sense of well-being. 
+
+Looking into his past credentials of vast technical & professional experience, the Govt. of Rajasthan has appointed Dr. Ravi Juniwal to the coveted post of Chairman of the Board of Governors (BoG) of the Engineering College, Ajmer; Society having Three Engg. Colleges namely, Govt. Engg. College, Ajmer; Govt. Women Engg. College, Ajmer and Govt. Engg. College, Banswara. Dr. Juniwal also has the honour of being nominated as the nominee on the Board of Management of the Rajasthan Technical University, Kota by the Hon’ble Governor & Chancellor of RTU, Kota. 
+
+In view of his vast academic experience, untiring efforts & continued patronage in the field of Higher & Technical Education, the Ministry of HRD, Govt. of India has nominated Dr. Ravi Juniwal as the Member of the BoG of MNIT, Jaipur. He has also been made as member of the Admission/Coordination Committees of RMAT/RMCAAT/REAP.
+				I sincerely invite you to share my dreams which are similar to your dreams. Let us jointly ensure a bright, assuring and enviable engineering career for our child. I assure you that, I am committed to whatever is expressed above.&nbsp; &nbsp;&nbsp;
+				<span style = "float : right">Sincerely,<span><br></span>Dr.Ravi Juniwal<span><br></span>Chairman.</span><span><br></span></p>
+			<br><br>
+			<hr>
+			<h1>Our Vision</h1>
+			<p>To be recognized among the best institutes in India for excellence in technical education.</p>
+			<hr>
+			<h1>Our Mission</h1>
+			<p>To impart value added technical education through ambiance of academic excellence, research and life skills by inculcating personal touch and respect in relationship amongst the stakeholders.<p>
+			<hr>
+			<h1>Our Objective</h1>
+			<ol style = "list-style-type: inherit;">
+				<li>To achieve a status of premier technological institute.</li>
+				<li>To achieve excellence on academic, administrative and personality development fronts through our own channelized pattern of teaching learning process.</li>
+				<li>To develop the state-of-the-art research and development and consultancy cell.</li>
+				<li>To strengthen industry-institute interaction to provide industrial exposure to the students and up-gradation of faculty knowledge about advance trends.</li>
+			</ol>
+			<hr>
+			<h1>Our Quality Policy</h1>
+			<ol style = "list-style-type: inherit;">
+			We are committed for academic and overall development of our students:
+				<li>By effective implementation of teaching learning process.</li>
+				<li>By establishing respectful and pleasant behavior with the students and inculcation of culture of patience and co-operation.</li>
+				<li>By providing ample opportunities for personality development.</li>
+				<li>By creating environment conducive to learning</li>
+			</ol>
+			<hr>
+			<h1>Our Vivid Vision</h1>
+			"Jaipur Pattern in Professional Education" as the toll for Academic and overall development of the students.
+			The glorious tradition of the standng in the list of meritorious students in the University
+			85 + % Placement of Eligible Candidates through campus recruitment.
+			<h1>Approvals & Accreditations</h1>
+			Approved by All India Council for Technical Education (AICTE), New Delhi.
+			Awarded as 'A' Grade Institute by Govt.of Rajasthan.
+			ISO 9001:2000 certified Institute.
+			Accredited by TCS
+		</div>
+		<script>
+			function visible(num){
+				if(num == 1 && document.getElementById("display_Event").style.display == "none")
+					  document.getElementById("display_Event").style.display = "block";
+				else{
+					document.getElementById("display_Event").style.display = "none";
+				}
+				if(num == 2 && document.getElementById("display_Login").style.display == "none")
+					  document.getElementById("display_Login").style.display = "block";
+				else{
+					document.getElementById("display_Login").style.display = "none";
+				}
+				if(num == 3 && document.getElementById("display_Sign_Up").style.display == "none")
+					  document.getElementById("display_Sign_Up").style.display = "block";
+				else{
+					document.getElementById("display_Sign_Up").style.display = "none";
+				}
+				if(num == 4 && document.getElementById("display_Contact_Details").style.display == "none")
+					  document.getElementById("display_Contact_Details").style.display = "block";
+				else{
+					document.getElementById("display_Contact_Details").style.display = "none";
+				}
+				if(num == 5 && document.getElementById("display_About_Us").style.display == "none")
+					  document.getElementById("display_About_Us").style.display = "block";
+				else{
+					document.getElementById("display_About_Us").style.display = "none";
+				}
+				if(num == 6 && document.getElementById("display_Home").style.display == "none")
+					  document.getElementById("display_Home").style.display = "block";
+				else{
+					document.getElementById("display_Home").style.display = "none";
+				}
+			}
+		</script>
+
+	</body>
+</htm
